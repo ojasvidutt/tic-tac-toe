@@ -1,0 +1,247 @@
+*{box-sizing: border-box; margin: 0; padding: 0; font-family: sans-serif;}
+a{ text-decoration: none;}
+button{ cursor: pointer; padding: 0;}
+:disabled{ cursor: not-allowed;}
+img{ vertical-align: bottom;}
+ul{ list-style: none; padding: 0;}
+*{cursor: pointer;}
+
+/* 12grid */
+
+.container{max-width: 100vw; display: grid; place-items: center; background: aliceblue; margin: auto;height: 100vh; font-family: Bungee;}
+.row{display: grid; grid-template-columns: repeat(12,1fr); }
+.col-1{grid-column: span 1;}
+.col-2{grid-column: span 2;}
+.col-3{grid-column: span 3;}
+.col-4{grid-column: span 4;}
+.col-5{grid-column: span 5;}
+.col-6{grid-column: span 6;}
+.col-7{grid-column: span 7;}
+.col-8{grid-column: span 8;}
+.col-9{grid-column: span 9;}
+.col-10{grid-column: span 10;}
+.col-11{grid-column: span 11;}
+.col-12{grid-column: span 12;}
+
+
+
+/* custom */
+
+.row .col-4 {
+    height: 100px;
+    width: 100px; 
+    gap: 0;
+    border-width: 0px 2px 2px 0px;
+    border-color: black;
+    border-style: solid;
+    box-sizing: border-box; 
+    ;
+}
+.bottom{
+    border-right: none !important; 
+    
+}
+.row :nth-child(7), .row :nth-child(9),
+.row :nth-child(8) {
+    border-bottom: none !important; 
+}
+
+
+/* Add hover effect for grid cells */
+.row .col-4:hover {
+    background-color: lightgray;
+    transition: background-color 0.3s ease;
+}
+
+/* Add a subtle shadow to the grid cells */
+.row .col-4 {
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Style for the container */
+.container {
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Update grid cell colors to mild tones */
+.row .col-4:nth-child(odd) {
+    background-color: #E0F7FA; /* Light Cyan */
+}
+
+.row .col-4:nth-child(even) {
+    background-color: #FFECB3; /* Light Amber */
+}
+
+/* Update hover effect with softer colors */
+.row .col-4:hover {
+    background-color: #B2DFDB; /* Soft Teal */
+    color: #333; /* Darker text for contrast */
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+/* Update title gradient to mild tones with better visibility */
+.title {
+    background: linear-gradient(90deg, #FF5722, #3F51B5);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 3rem; /* Increase font size for better visibility */
+    font-weight: bold; /* Keep the text bold */
+    text-align: center; /* Center align the title */
+    margin: 30px 0; /* Add more spacing around the title */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2); /* Subtle shadow for readability */
+    color: #FFFFFF; /* Pure white text for better contrast */
+    background: linear-gradient(90deg, #FF8A65, #193eff); /* Softer gradient background */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Update container gradient to softer tones */
+.container {
+    background: linear-gradient(135deg, #E0F7FA, #FFECB3);
+}
+/* Style for X and O symbols */
+.symbol {
+    font-size: 3rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    color: #333; /* Default color */
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+/* Style for X */
+.symbol.x {
+    color: #FF5722; /* Vibrant Orange */
+    text-shadow: 2px 2px 5px rgba(255, 87, 34, 0.5);
+    
+    
+
+}
+
+/* Style for O */
+.symbol.o {
+    color: #3F51B5; /* Deep Blue */
+    text-shadow: 2px 2px 5px rgba(63, 81, 181, 0.5);
+ 
+   
+}
+
+/* Add hover effect for symbols */
+.symbol:hover {
+    transform: scale(1.1);
+    color: #000; /* Darker color on hover */
+}
+
+/* Style for Player 1 and Player 2 buttons */
+.button {
+    padding: 10px 20px;
+    margin: 10px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.button.player1 {
+    background-color: #4CAF50; /* Green Shade */
+    color: white;
+}
+
+.button.player2 {
+    background-color: #3F51B5; /* Deep Blue */
+    color: white;
+}
+.red{
+    color: #ff2222; /* Red Shade */
+    
+}
+.red:hover{
+    transform: scale(1.1);
+    color: #ff2222
+}
+
+/* Style for the modal container */
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    width: 80%;
+    max-width: 400px;
+    padding: 20px;
+    text-align: center;
+    z-index: 1000;
+    display: none; /* Hidden by default */
+}
+
+/* Style for the modal overlay */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+    display: none; /* Hidden by default */
+}
+
+/* Style for the modal title */
+.modal-title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #333;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+/* Style for the play again button */
+.modal .play-again {
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    background-color: #FF5722; /* Vibrant Orange */
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-top: 20px;
+}
+
+/* Hover effect for the play again button */
+.modal .play-again:hover {
+    background-color: #E64A19; /* Darker Orange */
+    transform: scale(1.1);
+}
+
+
+/* Style for the close modal button */
+.modal .close-modal {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: transparent;
+    border: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+    cursor: pointer;
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+/* Hover effect for the close modal button */
+.modal .close-modal:hover {
+    color: #FF5722; /* Vibrant Orange */
+    transform: scale(1.2);
+}

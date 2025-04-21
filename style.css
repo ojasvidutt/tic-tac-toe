@@ -245,3 +245,12 @@ ul{ list-style: none; padding: 0;}
     color: #FF5722; /* Vibrant Orange */
     transform: scale(1.2);
 }
+
+.overlay{
+    display: none;
+    height: 100vh;
+    width: 100vw;
+    background: #00000013;
+    position: absolute;
+    top: 0;left: 0;
+}

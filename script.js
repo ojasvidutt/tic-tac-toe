@@ -98,12 +98,30 @@ document.querySelector(".play-again").addEventListener("click", function () {
    board=["", "", "", "", "", "", "", "", ""]; 
    document.querySelectorAll(".col-4").forEach((i)=>{
     i.innerHTML= ``;
+   
    })
-});
-},10); 
+   player="player1";
+   selected=`<p class="symbol">X</p>`;
+   symbol= "X";
+
+   player2Button.style.backgroundColor = '#3F51B5'; 
+   player2Button.style.transform = 'scale(1)'; 
+   player2Button.style.boxShadow = 'none'; 
+   player2Button.style.border = 'none';
+     player1Button.style.backgroundColor = '#45A049'; 
+     player1Button.style.transform = 'scale(1.1)'; 
+     player1Button.style.boxShadow = '0 7px 11px rgba(0, 0, 0, 0.2)'; 
+     player1Button.style.transition = 'all 0.3s ease'; player1Button.style.border = '2px solid black';
+   
+   
+
+
+
+   },10); 
 
 console.log(board);
 console.log(symbol);
 console.log(player); 
 
 })});
+},10);
